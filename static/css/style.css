@@ -1,0 +1,1988 @@
+/* =========================================================
+   CallCenter AI - Blue Eclipse Theme
+   Color palette:
+   #272757 - Deep Indigo
+   #8686AC - Soft Lavender
+   #505081 - Slate Indigo
+   #0F0E47 - Midnight Indigo
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(134, 134, 172, 0.18) 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(80, 80, 129, 0.16) 0%,
+            transparent 35%
+        ),
+        #f7f7fb;
+
+    min-height: 100vh;
+    color: #272757;
+}
+
+
+/* ---------------------------------
+   Main Container
+--------------------------------- */
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 35px 0 60px;
+}
+
+
+/* ---------------------------------
+   Back Button
+--------------------------------- */
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #505081;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    color: #0F0E47;
+    transform: translateX(-3px);
+}
+
+
+/* ---------------------------------
+   Header
+--------------------------------- */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #0F0E47;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #505081;
+    font-size: 16px;
+}
+
+.supported-formats {
+    margin-top: 8px;
+    font-size: 13px !important;
+    color: #8686AC !important;
+}
+
+
+/* ---------------------------------
+   Error
+--------------------------------- */
+
+.error {
+    background: #f8eeee;
+    border: 1px solid #d8bcbc;
+    color: #6e2525;
+    padding: 15px 18px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* ---------------------------------
+   Upload Card
+--------------------------------- */
+
+.upload-card {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(134, 134, 172, 0.35);
+    border-radius: 20px;
+    padding: 45px;
+    box-shadow:
+        0 20px 45px rgba(15, 14, 71, 0.10);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+
+/* ---------------------------------
+   Upload Icon
+--------------------------------- */
+
+.upload-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 20px;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+
+    background: rgba(134, 134, 172, 0.20);
+    color: #0F0E47;
+}
+
+
+/* ---------------------------------
+   Upload Text
+--------------------------------- */
+
+.upload-card h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+    color: #272757;
+}
+
+.upload-card .upload-description {
+    color: #505081;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+
+/* ---------------------------------
+   File Input
+--------------------------------- */
+
+.file-wrapper {
+    border: 2px dashed #8686AC;
+    border-radius: 16px;
+    padding: 28px;
+    background: rgba(134, 134, 172, 0.08);
+    transition: 0.25s;
+    margin-bottom: 22px;
+}
+
+.file-wrapper:hover {
+    border-color: #505081;
+    background: rgba(134, 134, 172, 0.14);
+}
+
+.file-wrapper label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #272757;
+    margin-bottom: 14px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #8686AC;
+    border-radius: 10px;
+    background: white;
+    color: #505081;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    border: none;
+    background: #272757;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: #0F0E47;
+}
+
+
+/* ---------------------------------
+   Analyze Button
+--------------------------------- */
+
+.analyze-button {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #272757,
+        #0F0E47
+    );
+
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 20px rgba(15, 14, 71, 0.22);
+
+    transition: 0.25s;
+}
+
+.analyze-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 25px rgba(15, 14, 71, 0.30);
+
+    background: linear-gradient(
+        135deg,
+        #505081,
+        #272757
+    );
+}
+
+
+/* ---------------------------------
+   Result Card
+--------------------------------- */
+
+.result-card {
+    background: white;
+    border: 1px solid rgba(134, 134, 172, 0.35);
+    border-radius: 22px;
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(15, 14, 71, 0.10);
+}
+
+
+/* ---------------------------------
+   Result Header
+--------------------------------- */
+
+.result-header {
+    padding: 28px 32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #272757,
+            #505081
+        );
+
+    border-bottom: 1px solid #505081;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result-header h2 {
+    font-size: 25px;
+    margin-top: 10px;
+    color: white;
+}
+
+
+/* ---------------------------------
+   Badge
+--------------------------------- */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 11px;
+
+    border-radius: 30px;
+
+    background: #8686AC;
+    color: #0F0E47;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+
+/* ---------------------------------
+   Summary Sections
+--------------------------------- */
+
+.summary-section {
+    padding: 25px 32px;
+    border-bottom: 1px solid rgba(134, 134, 172, 0.22);
+}
+
+.summary-section:last-of-type {
+    border-bottom: none;
+}
+
+.summary-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 15px;
+    color: #272757;
+    margin-bottom: 10px;
+}
+
+.summary-section h3::before {
+    content: "";
+
+    width: 4px;
+    height: 18px;
+
+    border-radius: 5px;
+
+    background: linear-gradient(
+        #505081,
+        #0F0E47
+    );
+}
+
+.summary-section p {
+    color: #505081;
+    line-height: 1.75;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+
+/* ---------------------------------
+   Download Area
+--------------------------------- */
+
+.download-area {
+    padding: 25px 32px;
+
+    background:
+        rgba(134, 134, 172, 0.08);
+
+    border-top: 1px solid rgba(134, 134, 172, 0.25);
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 13px 20px;
+
+    border-radius: 11px;
+
+    background: #0F0E47;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.download-button::before {
+    content: "↓";
+    font-size: 18px;
+}
+
+.download-button:hover {
+    background: #505081;
+    transform: translateY(-2px);
+}
+
+
+/* ---------------------------------
+   Mobile
+--------------------------------- */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+        padding-top: 25px;
+    }
+
+    .page-header h1 {
+        font-size: 28px;
+    }
+
+    .upload-card {
+        padding: 25px 18px;
+    }
+
+    .result-header {
+        padding: 22px;
+    }
+
+    .result-header h2 {
+        font-size: 21px;
+    }
+
+    .summary-section {
+        padding: 22px;
+    }
+
+    .download-area {
+        padding: 20px;
+        justify-content: stretch;
+    }
+
+    .download-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* =========================================================
+   BLUE ECLIPSE DASHBOARD
+   Color Palette:
+   #272757
+   #8686AC
+   #505081
+   #0F0E47
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Dashboard Container
+--------------------------------------------------------- */
+
+.dashboard-container {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(134, 134, 172, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(80, 80, 129, 0.18),
+            transparent 30%
+        ),
+        #f7f7fa;
+
+}
+
+
+/* ---------------------------------------------------------
+   Header
+--------------------------------------------------------- */
+
+.dashboard-header {
+
+    width: 100%;
+
+    padding: 28px 6%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e5ee;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.brand-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #0F0E47;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 8px 20px rgba(15, 14, 71, 0.20);
+
+}
+
+
+.brand h1 {
+
+    margin: 0;
+
+    color: #0F0E47;
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.4px;
+
+}
+
+
+.brand p {
+
+    margin: 4px 0 0;
+
+    color: #8686AC;
+
+    font-size: 13px;
+
+}
+
+
+/* ---------------------------------------------------------
+   Main
+--------------------------------------------------------- */
+
+.dashboard-main {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 70px 0 50px;
+
+}
+
+
+/* ---------------------------------------------------------
+   Welcome Section
+--------------------------------------------------------- */
+
+.welcome-section {
+
+    max-width: 700px;
+
+    margin-bottom: 45px;
+
+}
+
+
+.dashboard-label {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #e8e8f2;
+
+    color: #505081;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+}
+
+
+.welcome-section h2 {
+
+    margin: 0;
+
+    color: #0F0E47;
+
+    font-size: 48px;
+
+    line-height: 1.12;
+
+    letter-spacing: -2px;
+
+    font-weight: 800;
+
+}
+
+
+.welcome-section h2 span {
+
+    color: #505081;
+
+}
+
+
+.welcome-section p {
+
+    max-width: 620px;
+
+    margin-top: 20px;
+
+    color: #686883;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+
+}
+
+
+/* ---------------------------------------------------------
+   Dashboard Grid
+--------------------------------------------------------- */
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+
+}
+
+
+/* ---------------------------------------------------------
+   Dashboard Cards
+--------------------------------------------------------- */
+
+.dashboard-card {
+
+    position: relative;
+
+    min-height: 330px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+/* Analyze Card */
+
+.analyze-card {
+
+    background: #0F0E47;
+
+    color: white;
+
+    box-shadow:
+        0 20px 45px rgba(15, 14, 71, 0.22);
+
+}
+
+
+/* Recordings Card */
+
+.recordings-card {
+
+    background: #505081;
+
+    color: white;
+
+    box-shadow:
+        0 20px 45px rgba(80, 80, 129, 0.22);
+
+}
+
+
+/* Decorative Circle */
+
+.dashboard-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    right: -80px;
+
+    bottom: -90px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    pointer-events: none;
+
+}
+
+
+.dashboard-card:hover {
+
+    transform: translateY(-7px);
+
+}
+
+
+.analyze-card:hover {
+
+    box-shadow:
+        0 28px 55px rgba(15, 14, 71, 0.30);
+
+}
+
+
+.recordings-card:hover {
+
+    box-shadow:
+        0 28px 55px rgba(80, 80, 129, 0.30);
+
+}
+
+
+/* ---------------------------------------------------------
+   Card Top
+--------------------------------------------------------- */
+
+.card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.card-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.13);
+
+    font-size: 26px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+
+.card-arrow {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    font-size: 20px;
+
+    transition: transform 0.25s ease;
+
+}
+
+
+.dashboard-card:hover .card-arrow {
+
+    transform: translateX(5px);
+
+}
+
+
+/* ---------------------------------------------------------
+   Card Content
+--------------------------------------------------------- */
+
+.card-content {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.card-content h3 {
+
+    margin: 0 0 12px;
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+.card-content p {
+
+    max-width: 430px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ---------------------------------------------------------
+   Card Footer
+--------------------------------------------------------- */
+
+.card-footer {
+
+    position: relative;
+
+    z-index: 1;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+}
+
+
+.card-footer span {
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+/* ---------------------------------------------------------
+   Information Bar
+--------------------------------------------------------- */
+
+.dashboard-info {
+
+    margin-top: 25px;
+
+    padding: 24px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    gap: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5ee;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(39, 39, 87, 0.06);
+
+}
+
+
+.info-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    text-align: center;
+
+}
+
+
+.info-item strong {
+
+    color: #272757;
+
+    font-size: 13px;
+
+}
+
+
+.info-item span {
+
+    color: #8686AC;
+
+    font-size: 12px;
+
+}
+
+
+.info-divider {
+
+    width: 1px;
+
+    height: 35px;
+
+    background: #e3e3ec;
+
+}
+
+
+/* ---------------------------------------------------------
+   Footer
+--------------------------------------------------------- */
+
+.dashboard-footer {
+
+    margin-top: auto;
+
+    padding: 25px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #e5e5ee;
+
+    background: #ffffff;
+
+}
+
+
+.dashboard-footer p {
+
+    margin: 0;
+
+    color: #272757;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.dashboard-footer span {
+
+    color: #8686AC;
+
+    font-size: 12px;
+
+}
+
+
+/* ---------------------------------------------------------
+   Responsive
+--------------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+    .dashboard-main {
+
+        width: 92%;
+
+        padding: 50px 0 40px;
+
+    }
+
+
+    .welcome-section h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .dashboard-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .dashboard-card {
+
+        min-height: 290px;
+
+    }
+
+
+    .dashboard-info {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .info-divider {
+
+        width: 100%;
+
+        height: 1px;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .dashboard-header {
+
+        padding: 22px 5%;
+
+    }
+
+
+    .brand h1 {
+
+        font-size: 18px;
+
+    }
+
+
+    .brand-icon {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .welcome-section h2 {
+
+        font-size: 32px;
+
+        letter-spacing: -1.2px;
+
+    }
+
+
+    .welcome-section p {
+
+        font-size: 14px;
+
+    }
+
+
+    .dashboard-card {
+
+        min-height: 270px;
+
+        padding: 24px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .card-content h3 {
+
+        font-size: 23px;
+
+    }
+
+
+    .dashboard-footer {
+
+        flex-direction: column;
+
+        gap: 7px;
+
+        text-align: center;
+
+    }
+
+}
+/* =========================================================
+   CALL RECORDINGS PAGE
+   BLUE ECLIPSE THEME
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Page
+--------------------------------------------------------- */
+
+.recordings-page {
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(134, 134, 172, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(80, 80, 129, 0.12),
+            transparent 30%
+        ),
+        #f7f7fa;
+
+    color: #272757;
+
+}
+
+
+/* ---------------------------------------------------------
+   Container
+--------------------------------------------------------- */
+
+.recordings-container {
+
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 40px 0 70px;
+
+}
+
+
+/* ---------------------------------------------------------
+   Back Button
+--------------------------------------------------------- */
+
+.recordings-back {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 35px;
+
+    color: #505081;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+
+}
+
+
+.recordings-back:hover {
+
+    color: #0F0E47;
+
+    transform: translateX(-4px);
+
+}
+
+
+/* ---------------------------------------------------------
+   Header
+--------------------------------------------------------- */
+
+.recordings-header {
+
+    margin-bottom: 35px;
+
+}
+
+
+.recordings-label {
+
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    margin-bottom: 14px;
+
+    border-radius: 20px;
+
+    background: #e8e8f2;
+
+    color: #505081;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+}
+
+
+.recordings-header h1 {
+
+    margin: 0;
+
+    color: #0F0E47;
+
+    font-size: 40px;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+.recordings-header p {
+
+    margin-top: 9px;
+
+    color: #8686AC;
+
+    font-size: 15px;
+
+}
+
+
+/* ---------------------------------------------------------
+   Main Recording Card
+--------------------------------------------------------- */
+
+.recording-list-card {
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e4ed;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 45px rgba(39, 39, 87, 0.08);
+
+}
+
+
+/* ---------------------------------------------------------
+   Recording Item
+--------------------------------------------------------- */
+
+.recording-item {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 28px 30px;
+
+    border-bottom: 1px solid #eeeeF4;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.recording-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.recording-item:hover {
+
+    background: #fafafd;
+
+}
+
+
+/* ---------------------------------------------------------
+   Recording Main
+--------------------------------------------------------- */
+
+.recording-main {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+/* ---------------------------------------------------------
+   Recording Icon
+--------------------------------------------------------- */
+
+.recording-icon {
+
+    flex-shrink: 0;
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #0F0E47;
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 8px 18px rgba(15, 14, 71, 0.16);
+
+}
+
+
+/* ---------------------------------------------------------
+   Recording Information
+--------------------------------------------------------- */
+
+.recording-info {
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+.recording-info h3 {
+
+    margin: 2px 0 5px;
+
+    color: #272757;
+
+    font-size: 16px;
+
+    font-weight: 750;
+
+    word-break: break-word;
+
+}
+
+
+.recording-date {
+
+    margin: 0;
+
+    color: #8686AC;
+
+    font-size: 12px;
+
+}
+
+
+/* ---------------------------------------------------------
+   Audio
+--------------------------------------------------------- */
+
+.audio-wrapper {
+
+    margin-top: 17px;
+
+    max-width: 620px;
+
+}
+
+
+.audio-label {
+
+    margin-bottom: 7px;
+
+    color: #505081;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+
+}
+
+
+.recording-audio {
+
+    width: 100%;
+
+    height: 42px;
+
+    display: block;
+
+}
+
+
+/* Audio unavailable */
+
+.audio-unavailable {
+
+    margin-top: 15px;
+
+    color: #b45309;
+
+    font-size: 13px;
+
+}
+
+
+/* ---------------------------------------------------------
+   Actions
+--------------------------------------------------------- */
+
+.recording-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    flex-shrink: 0;
+
+}
+
+
+/* ---------------------------------------------------------
+   Status
+--------------------------------------------------------- */
+
+.recording-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.status-completed {
+
+    background: #e7edf8;
+
+    color: #272757;
+
+}
+
+
+.status-failed {
+
+    background: #fce8e8;
+
+    color: #a33a3a;
+
+}
+
+
+.status-processing {
+
+    background: #eeedf6;
+
+    color: #505081;
+
+}
+
+
+/* ---------------------------------------------------------
+   View Button
+--------------------------------------------------------- */
+
+.recording-view {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 9px 14px;
+
+    border-radius: 9px;
+
+    background: #0F0E47;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+
+}
+
+
+.recording-view:hover {
+
+    background: #272757;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* ---------------------------------------------------------
+   PDF Button
+--------------------------------------------------------- */
+
+.recording-pdf {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 9px 14px;
+
+    border-radius: 9px;
+
+    background: #e9e9f1;
+
+    color: #272757;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+
+}
+
+
+.recording-pdf:hover {
+
+    background: #8686AC;
+
+    color: #ffffff;
+
+}
+
+
+/* ---------------------------------------------------------
+   Delete
+--------------------------------------------------------- */
+
+.recording-delete-form {
+
+    margin: 0;
+
+}
+
+
+.recording-delete {
+
+    border: 1px solid #e8cccc;
+
+    padding: 8px 13px;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #a33a3a;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.recording-delete:hover {
+
+    background: #f8e9e9;
+
+    border-color: #d7aaaa;
+
+}
+
+
+/* ---------------------------------------------------------
+   Empty State
+--------------------------------------------------------- */
+
+.recordings-empty {
+
+    padding: 75px 30px;
+
+    text-align: center;
+
+}
+
+
+.empty-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    border-radius: 18px;
+
+    background: #eeeeF6;
+
+    font-size: 27px;
+
+}
+
+
+.recordings-empty h3 {
+
+    margin: 0;
+
+    color: #272757;
+
+    font-size: 20px;
+
+}
+
+
+.recordings-empty p {
+
+    margin: 8px 0 22px;
+
+    color: #8686AC;
+
+    font-size: 14px;
+
+}
+
+
+.empty-button {
+
+    display: inline-flex;
+
+    padding: 11px 18px;
+
+    border-radius: 10px;
+
+    background: #0F0E47;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+
+}
+
+
+.empty-button:hover {
+
+    background: #272757;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ---------------------------------------------------------
+   Responsive
+--------------------------------------------------------- */
+
+@media (max-width: 850px) {
+
+    .recording-item {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .recording-actions {
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        padding-left: 70px;
+
+    }
+
+
+    .audio-wrapper {
+
+        max-width: 100%;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .recordings-container {
+
+        width: 92%;
+
+        padding-top: 25px;
+
+    }
+
+
+    .recordings-header h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .recording-item {
+
+        padding: 22px;
+
+    }
+
+
+    .recording-main {
+
+        gap: 13px;
+
+    }
+
+
+    .recording-icon {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 19px;
+
+    }
+
+
+    .recording-actions {
+
+        padding-left: 0;
+
+        gap: 7px;
+
+    }
+
+
+    .recording-view,
+    .recording-pdf,
+    .recording-delete {
+
+        padding: 8px 11px;
+
+    }
+
+}
+/* ==============================
+   ROBOT LOADING ANIMATION
+============================== */
+
+#loader-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(247, 247, 250, 0.96);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+#loader-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.robot {
+    width: 120px;
+    height: 120px;
+
+    background-image: url("https://cdn-icons-png.flaticon.com/512/4712/4712025.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    animation: robotWalk 1s infinite alternate ease-in-out;
+}
+
+#loading-text {
+    margin-top: 20px;
+
+    color: #0F0E47;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    animation: loadingPulse 1.5s infinite;
+}
+
+@keyframes robotWalk {
+    0% {
+        transform: translateX(-12px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translateX(12px) rotate(5deg);
+    }
+}
+
+@keyframes loadingPulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}

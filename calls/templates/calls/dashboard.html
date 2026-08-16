@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Call Analytics AI</title>
+
+    <link rel="stylesheet"
+          href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Header -->
+
+    <header class="dashboard-header">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                AI
+            </div>
+
+            <div>
+                <h1>Call Analytics AI</h1>
+
+                <p>
+                    AI-powered call center analysis
+                </p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+
+    <main class="dashboard-main">
+
+        <div class="welcome-section">
+
+            <span class="dashboard-label">
+                CALL CENTER ANALYTICS
+            </span>
+
+            <h2>
+                Analyze your calls<br>
+                with <span>AI intelligence.</span>
+            </h2>
+
+            <p>
+                Upload customer call recordings and let AI
+                extract meaningful insights, sentiment,
+                resolutions and actionable information.
+            </p>
+
+        </div>
+
+
+        <!-- Dashboard Cards -->
+
+        <div class="dashboard-grid">
+
+
+            <!-- Analyze Call -->
+
+            <a href="{% url 'analyze_call' %}"
+               class="dashboard-card analyze-card">
+
+                <div class="card-top">
+
+                    <div class="card-icon">
+                        🎧
+                    </div>
+
+                    <span class="card-arrow">
+                        →
+                    </span>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Analyze Call
+                    </h3>
+
+                    <p>
+                        Upload a call recording and generate
+                        an AI-powered analysis including
+                        summary, sentiment and resolution.
+                    </p>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <span>
+                        Start Analysis
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Recordings -->
+
+            <a href="{% url 'recordings' %}"
+               class="dashboard-card recordings-card">
+
+                <div class="card-top">
+
+                    <div class="card-icon">
+                        📁
+                    </div>
+
+                    <span class="card-arrow">
+                        →
+                    </span>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        View Recordings
+                    </h3>
+
+                    <p>
+                        Access previously analyzed calls,
+                        listen to recordings and download
+                        detailed reports.
+                    </p>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <span>
+                        View History
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- Bottom Information -->
+
+        <div class="dashboard-info">
+
+            <div class="info-item">
+
+                <strong>AI Analysis</strong>
+
+                <span>
+                    Automated call insights
+                </span>
+
+            </div>
+
+
+            <div class="info-divider"></div>
+
+
+            <div class="info-item">
+
+                <strong>Sentiment</strong>
+
+                <span>
+                    Customer emotion detection
+                </span>
+
+            </div>
+
+
+            <div class="info-divider"></div>
+
+
+            <div class="info-item">
+
+                <strong>Reports</strong>
+
+                <span>
+                    Downloadable PDF reports
+                </span>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer class="dashboard-footer">
+
+        <p>
+            Call Analytics AI
+        </p>
+
+        <span>
+            Intelligent call center analysis
+        </span>
+
+    </footer>
+
+</div>
+<script>
+window.addEventListener("load", function () {
+
+    const loader = document.getElementById("page-loader");
+
+    if (loader) {
+        loader.classList.add("hide");
+    }
+
+});
+</script>
+</body>
+
+</html>

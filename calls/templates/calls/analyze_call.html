@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Analyze Call | CallCenter AI</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+
+<body>
+<!-- Robot Loading Screen -->
+<div id="loader-overlay">
+    <div class="robot"></div>
+    <div id="loading-text"> Analyzing your call...</div>
+</div>
+
+<div class="container">
+
+
+    <!-- Back -->
+
+    <a href="{% url 'dashboard' %}"
+       class="back-button">
+
+        ← Back to Dashboard
+
+    </a>
+
+
+    <!-- Header -->
+
+    <div class="page-header">
+
+        <h1>
+            Analyze Call
+        </h1>
+
+        <p>
+            Upload a customer call recording and let AI analyze the conversation.
+        </p>
+
+        <p class="supported-formats">
+
+            Supported formats:
+            MP4 · MP3 · WAV · OGG · AAC · FLAC · M4A
+
+        </p>
+
+    </div>
+
+
+    <!-- Error -->
+
+    {% if error %}
+
+        <div class="error">
+
+            {{ error }}
+
+        </div>
+
+    {% endif %}
+
+
+    <!-- Upload -->
+
+    {% if not call %}
+
+    <div class="upload-card">
+
+
+        <div class="upload-icon">
+
+            🎙️
+
+        </div>
+
+
+        <h2>
+            Upload Call Recording
+        </h2>
+
+
+        <p class="upload-description">
+
+            Upload a call recording and Gemini AI will generate
+            a detailed analysis of the conversation.
+
+        </p>
+
+
+        <form
+            method="POST"
+            enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+
+            <div class="file-wrapper">
+
+                <label for="recording">
+
+                    Select Call Recording
+
+                </label>
+
+
+                <input
+                    type="file"
+                    id="recording"
+                    name="recording"
+                    accept=".mp4,.mp3,.wav,.ogg,.aac,.flac,.m4a"
+                    required>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="analyze-button">
+
+                ✨ Analyze Call with AI
+
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- Results -->
+
+    {% if call %}
+
+    <div class="result-card">
+
+
+        <div class="result-header">
+
+            <div>
+
+                <span class="badge">
+
+                    ✓ Analysis Complete
+
+                </span>
+
+
+                <h2>
+
+                    AI Call Analysis
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- Overall Summary -->
+
+        <div class="summary-section">
+
+            <h3>
+                Overall Summary
+            </h3>
+
+            <p>
+                {{ call.summary }}
+            </p>
+
+        </div>
+
+
+        <!-- Customer Issue -->
+
+        <div class="summary-section">
+
+            <h3>
+                Customer Issue
+            </h3>
+
+            <p>
+                {{ call.customer_issue }}
+            </p>
+
+        </div>
+
+
+        <!-- Resolution -->
+
+        <div class="summary-section">
+
+            <h3>
+                Resolution
+            </h3>
+
+            <p>
+                {{ call.resolution }}
+            </p>
+
+        </div>
+
+
+        <!-- Sentiment -->
+
+        <div class="summary-section">
+
+            <h3>
+                Customer Sentiment
+            </h3>
+
+            <p>
+                {{ call.sentiment }}
+            </p>
+
+        </div>
+
+
+        <!-- Agent -->
+
+        <div class="summary-section">
+
+            <h3>
+                Agent Performance
+            </h3>
+
+            <p>
+                {{ call.agent_performance }}
+            </p>
+
+        </div>
+
+
+        <!-- Topics -->
+
+        <div class="summary-section">
+
+            <h3>
+                Key Topics
+            </h3>
+
+            <p>
+                {{ call.key_topics }}
+            </p>
+
+        </div>
+
+
+        <!-- Actions -->
+
+        <div class="summary-section">
+
+            <h3>
+                Action Items
+            </h3>
+
+            <p>
+                {{ call.action_items }}
+            </p>
+
+        </div>
+
+
+        <!-- Download -->
+
+        <div class="download-area">
+
+            <a
+                href="{% url 'download_report' call.id %}"
+                class="download-button">
+
+                Download AI Report
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+    {% endif %}
+
+
+</div>
+<script>
+    const form = document.querySelector("form");
+    const loader = document.getElementById("loader-overlay");
+
+    if (form && loader) {
+        form.addEventListener("submit", function () {
+            loader.classList.add("active");
+        });
+    }
+</script>
+
+</body>
+
+</html>

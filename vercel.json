@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "callcenter/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "callcenter/wsgi.py"
+    }
+  ]
+}

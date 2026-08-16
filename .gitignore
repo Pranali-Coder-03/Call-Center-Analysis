@@ -1,0 +1,15 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+.env
+.env.*
+!.env.example
+
+db.sqlite3
+
+.vercel/
+
+.idea/
+.vscode/

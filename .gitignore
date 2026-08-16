@@ -1,15 +1,38 @@
-venv/
-.venv/
-__pycache__/
-*.pyc
-
+# Environment variables
 .env
 .env.*
 !.env.example
 
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Django
+*.log
 db.sqlite3
+media/
+staticfiles/
 
-.vercel/
-
-.idea/
+# IDE
 .vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
